@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Our Mobile Apps & Games | theKami</title>
+  <meta name="description" content="Explore all mobile applications and games created and published by Kumail Raza Bangash (theKami).">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <style>
+    :root {
+      --primary: #462C7D;
+      --secondary: #831C91;
+      --tertiary: #D552A3;
+      --quaternary: #FF70BF;
+      --bg-dark: #0e0a17;
+      --card-bg: #181226;
+      --card-hover: #221a36;
+      --text-main: #f8fafc;
+      --text-muted: #b3a8c9;
+      --border: #32254d;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; font-family: 'Segoe UI', Roboto, Helvetica, sans-serif; }
+    body { background-color: var(--bg-dark); color: var(--text-main); line-height: 1.6; display: flex; flex-direction: column; min-height: 100vh; }
+
+    nav {
+      display: flex; justify-content: space-between; align-items: center; padding: 18px 8%;
+      background: rgba(14, 10, 23, 0.95); backdrop-filter: blur(12px);
+      position: sticky; top: 0; z-index: 100; border-bottom: 1px solid var(--border);
+    }
+    .logo { font-size: 1.5rem; font-weight: 800; color: var(--text-main); text-decoration: none; display: flex; align-items: center; gap: 10px; }
+    .logo span { background: linear-gradient(135deg, var(--tertiary), var(--quaternary)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+    .nav-links a { color: var(--text-muted); text-decoration: none; margin-left: 22px; transition: color 0.3s; font-size: 0.95rem; font-weight: 600; }
+    .nav-links a:hover, .nav-links a.active { color: var(--quaternary); }
+
+    .header-banner { text-align: center; padding: 50px 20px 30px; max-width: 800px; margin: 0 auto; }
+    .header-banner h1 { font-size: 2.6rem; font-weight: 800; margin-bottom: 12px; }
+    .header-banner p { color: var(--text-muted); font-size: 1.1rem; }
+
+    .container { max-width: 1200px; margin: 0 auto; padding: 0 20px 70px; flex: 1; }
+    .apps-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(340px, 1fr)); gap: 28px; }
+    
+    .app-card {
+      background: var(--card-bg); border-radius: 18px; padding: 24px; border: 1px solid var(--border);
+      transition: all 0.3s ease; display: flex; flex-direction: column; justify-content: space-between;
+    }
+    .app-card:hover { transform: translateY(-6px); border-color: var(--tertiary); background: var(--card-hover); box-shadow: 0 14px 35px rgba(131, 28, 145, 0.25); }
+    .app-header { display: flex; gap: 16px; align-items: center; margin-bottom: 16px; }
+    .app-icon { width: 68px; height: 68px; border-radius: 16px; object-fit: cover; border: 1px solid var(--border); background: #120d20; flex-shrink: 0; }
+    .app-title h3 { font-size: 1.22rem; color: var(--text-main); line-height: 1.3; }
+    .app-category { font-size: 0.8rem; color: var(--quaternary); font-weight: 700; text-transform: uppercase; letter-spacing: 0.5px; }
+    .app-desc { color: var(--text-muted); font-size: 0.94rem; margin-bottom: 20px; flex-grow: 1; }
+    
+    .tech-tags { display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 18px; }
+    .tech-tag { font-size: 0.75rem; background: rgba(70, 44, 125, 0.4); padding: 3px 8px; border-radius: 6px; color: #e9d5ff; border: 1px solid rgba(213, 82, 163, 0.25); }
+
+    .app-buttons { display: flex; gap: 10px; flex-wrap: wrap; }
+    .btn { display: inline-flex; align-items: center; gap: 8px; padding: 10px 18px; border-radius: 10px; font-size: 0.88rem; font-weight: 600; text-decoration: none; transition: 0.25s; }
+    .btn-primary { background: linear-gradient(135deg, var(--secondary), var(--tertiary)); color: #fff; }
+    .btn-primary:hover { background: linear-gradient(135deg, var(--tertiary), var(--quaternary)); box-shadow: 0 4px 15px rgba(255, 112, 191, 0.4); }
+    .btn-outline { background: rgba(70, 44, 125, 0.2); border: 1px solid var(--border); color: var(--text-muted); }
+    .btn-outline:hover { border-color: var(--quaternary); color: var(--text-main); }
+
+    footer { background: #08050e; border-top: 1px solid var(--border); padding: 45px 20px; text-align: center; color: var(--text-muted); font-size: 0.9rem; }
+    .footer-links { margin-bottom: 18px; }
+    .footer-links a { color: var(--text-muted); margin: 0 14px; text-decoration: none; font-weight: 500; transition: color 0.2s; }
+    .footer-links a:hover { color: var(--quaternary); }
+    .footer-legal { font-size: 0.85rem; color: #877b9f; margin-top: 8px; }
+  </style>
+</head>
+<body>
+
+  <!-- Header -->
+  <nav>
+    <a href="index.html" class="logo">
+      <i class="fa-solid fa-shapes" style="color: var(--quaternary);"></i> the<span>Kami</span>
+    </a>
+    <div class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="apps.html" class="active">Our Mobile Apps</a>
+      <a href="privacy-policy.html">Privacy Policy</a>
+      <a href="terms.html">Terms</a>
+      <a href="contact.html">Contact</a>
+    </div>
+  </nav>
+
+  <div class="header-banner">
+    <h1>Our Mobile Apps &amp; Games</h1>
+    <p>Explore all active applications built with modern frameworks and published across Android platforms.</p>
+  </div>
+
+  <main class="container">
+    <div class="apps-grid">
+
+      <!-- APP 1: ShapeVibe -->
+      <div class="app-card">
+        <div>
+          <div class="app-header">
+            <img src="https://lh3.googleusercontent.com/d/1Hyv6l_B_1Ope-j-9jgEBbLq38Vcthycw" alt="ShapeVibe" class="app-icon">
+            <div class="app-title">
+              <h3>ShapeVibe: Exercise &amp; Yoga</h3>
+              <span class="app-category">Health &amp; Fitness</span>
+            </div>
+          </div>
+          <div class="tech-tags">
+            <span class="tech-tag">Flutter</span>
+            <span class="tech-tag">BLoC</span>
+            <span class="tech-tag">Firebase</span>
+            <span class="tech-tag">AdMob</span>
+          </div>
+          <p class="app-desc">An all-in-one daily workout, yoga sequences, streak analytics, and hydration tracking app built to empower healthy habits without equipment.</p>
+        </div>
+        <div class="app-buttons">
+          <a href="https://play.google.com/store/apps/details?id=com.thekami.shapevibe" class="btn btn-primary" target="_blank" rel="noopener"><i class="fa-brands fa-google-play"></i> Google Play</a>
+          <a href="privacy-policy.html" class="btn btn-outline"><i class="fa-solid fa-shield-halved"></i> Privacy</a>
+        </div>
+      </div>
+
+      <!-- APP 2: LuminaWalls -->
+      <div class="app-card">
+        <div>
+          <div class="app-header">
+            <img src="https://lh3.googleusercontent.com/d/13VICzKN2Oa_X2rCvXlWLISqYexKy90d4" alt="LuminaWalls" class="app-icon">
+            <div class="app-title">
+              <h3>LuminaWalls: 4K &amp; Live Wallpapers</h3>
+              <span class="app-category">Personalization</span>
+            </div>
+          </div>
+          <div class="tech-tags">
+            <span class="tech-tag">Flutter</span>
+            <span class="tech-tag">Provider</span>
+            <span class="tech-tag">Workmanager</span>
+            <span class="tech-tag">Firestore</span>
+          </div>
+          <p class="app-desc">Curated 4K backgrounds and battery-efficient live wallpapers equipped with an automated background rotation engine.</p>
+        </div>
+        <div class="app-buttons">
+          <a href="https://play.google.com/store/apps/details?id=com.thekami.lumina_walls" class="btn btn-primary" target="_blank" rel="noopener"><i class="fa-brands fa-google-play"></i> Google Play</a>
+          <a href="privacy-policy.html" class="btn btn-outline"><i class="fa-solid fa-shield-halved"></i> Privacy</a>
+        </div>
+      </div>
+
+      <!-- APP 3: Scuba Sweep Adventure -->
+      <div class="app-card">
+        <div>
+          <div class="app-header">
+            <img src="https://lh3.googleusercontent.com/d/1XUbiw4-QarZ4VYwlHpxqvu6MPmCVkb4g" alt="Scuba Sweep" class="app-icon">
+            <div class="app-title">
+              <h3>Scuba Sweep Adventure</h3>
+              <span class="app-category">Arcade &amp; Action</span>
+            </div>
+          </div>
+          <div class="tech-tags">
+            <span class="tech-tag">Flame Engine</span>
+            <span class="tech-tag">Riverpod</span>
+            <span class="tech-tag">OpenAI API</span>
+            <span class="tech-tag">Firebase</span>
+          </div>
+          <p class="app-desc">An engaging 2D ocean-cleaning arcade game combining continuous diver gameplay, global leaderboards, and AI-powered marine conservation facts.</p>
+        </div>
+        <div class="app-buttons">
+          <a href="https://play.google.com/store/apps/details?id=com.thekami.scubasweepadventure" class="btn btn-primary" target="_blank" rel="noopener"><i class="fa-brands fa-google-play"></i> Google Play</a>
+          <a href="privacy-policy.html" class="btn btn-outline"><i class="fa-solid fa-shield-halved"></i> Privacy</a>
+        </div>
+      </div>
+
+      <!-- APP 4: MCQS GHAR -->
+      <div class="app-card">
+        <div>
+          <div class="app-header">
+            <img src="https://lh3.googleusercontent.com/d/1PwUG3yKDFBRH8hUR3OlVhg3Eik8lBzm9" alt="MCQS GHAR" class="app-icon">
+            <div class="app-title">
+              <h3>MCQS GHAR</h3>
+              <span class="app-category">Education &amp; Testing</span>
+            </div>
+          </div>
+          <div class="tech-tags">
+            <span class="tech-tag">Flutter</span>
+            <span class="tech-tag">Laravel API</span>
+            <span class="tech-tag">MySQL</span>
+            <span class="tech-tag">Quiz Engine</span>
+          </div>
+          <p class="app-desc">Comprehensive test preparation portal featuring thousands of subject-wise multiple choice questions, mock tests, and real-time score tracking.</p>
+        </div>
+        <div class="app-buttons">
+          <a href="https://kumailportfolio.freehosting.dev/project/2" class="btn btn-primary" target="_blank" rel="noopener"><i class="fa-solid fa-arrow-up-right-from-square"></i> View Project</a>
+          <a href="privacy-policy.html" class="btn btn-outline"><i class="fa-solid fa-shield-halved"></i> Privacy</a>
+        </div>
+      </div>
+
+      <!-- APP 5: KUST APP -->
+      <div class="app-card">
+        <div>
+          <div class="app-header">
+            <img src="https://lh3.googleusercontent.com/d/10rJt-8zGi51yiGGokFmJMCVRX4LBEDgr" alt="KUST APP" class="app-icon">
+            <div class="app-title">
+              <h3>KUST APP</h3>
+              <span class="app-category">Campus &amp; Utility</span>
+            </div>
+          </div>
+          <div class="tech-tags">
+            <span class="tech-tag">Flutter</span>
+            <span class="tech-tag">REST API</span>
+            <span class="tech-tag">Push Alerts</span>
+          </div>
+          <p class="app-desc">Campus communication portal providing students with timely academic notices, semester timetables, transport schedules, and exam results.</p>
+        </div>
+        <div class="app-buttons">
+          <a href="https://kumailportfolio.freehosting.dev/project/1" class="btn btn-primary" target="_blank" rel="noopener"><i class="fa-solid fa-arrow-up-right-from-square"></i> View Project</a>
+          <a href="privacy-policy.html" class="btn btn-outline"><i class="fa-solid fa-shield-halved"></i> Privacy</a>
+        </div>
+      </div>
+
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <div class="footer-links">
+      <a href="index.html">Home</a>
+      <a href="apps.html">Our Mobile Apps</a>
+      <a href="privacy-policy.html">Privacy Policy</a>
+      <a href="terms.html">Terms &amp; Conditions</a>
+      <a href="contact.html">Contact Me</a>
+      <a href="app-ads.txt" target="_blank">app-ads.txt</a>
+    </div>
+    <p>&copy; 2026 <strong>theKami</strong> &bull; Kumail Raza Bangash. All Rights Reserved.</p>
+    <p class="footer-legal">Compliant with Google Play Store &amp; AdMob Advertising Policies.</p>
+    <p style="margin-top: 10px; font-size: 0.88rem;">
+      Support Email: <a href="mailto:theKami350@gmail.com" style="color: var(--quaternary); text-decoration: none; font-weight: 600;">theKami350@gmail.com</a>
+    </p>
+  </footer>
+
+</body>
+</html>
