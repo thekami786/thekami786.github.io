@@ -3,25 +3,137 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Terms of Service | Kami Studio</title>
+  <title>Terms & Conditions | theKami</title>
+  <meta name="description" content="Terms and Conditions of use for applications and games published by theKami (Kumail Raza Bangash).">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
   <style>
-    body { background-color: #0f172a; color: #f8fafc; font-family: 'Segoe UI', sans-serif; line-height: 1.7; padding: 40px 20px; }
-    .container { max-width: 800px; margin: 0 auto; background: #1e293b; padding: 40px; border-radius: 12px; border: 1px solid #334155; }
-    h1, h2 { color: #38bdf8; margin-top: 24px; }
-    h1 { font-size: 2rem; border-bottom: 1px solid #334155; padding-bottom: 10px; margin-top: 0; }
-    p { color: #cbd5e1; }
-    a { color: #38bdf8; text-decoration: none; }
+    :root {
+      --primary: #462C7D;
+      --secondary: #831C91;
+      --tertiary: #D552A3;
+      --quaternary: #FF70BF;
+      --bg-dark: #0e0a17;
+      --card-bg: #181226;
+      --text-main: #f8fafc;
+      --text-muted: #b3a8c9;
+      --border: #32254d;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; font-family: 'Segoe UI', Roboto, Helvetica, sans-serif; }
+    body { background-color: var(--bg-dark); color: var(--text-main); line-height: 1.75; display: flex; flex-direction: column; min-height: 100vh; }
+
+    nav {
+      display: flex; justify-content: space-between; align-items: center; padding: 18px 8%;
+      background: rgba(14, 10, 23, 0.95); backdrop-filter: blur(12px);
+      position: sticky; top: 0; z-index: 100; border-bottom: 1px solid var(--border);
+    }
+    .logo { font-size: 1.5rem; font-weight: 800; color: var(--text-main); text-decoration: none; display: flex; align-items: center; gap: 10px; }
+    .logo span { background: linear-gradient(135deg, var(--tertiary), var(--quaternary)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+    .nav-links a { color: var(--text-muted); text-decoration: none; margin-left: 22px; transition: color 0.3s; font-size: 0.95rem; font-weight: 600; }
+    .nav-links a:hover, .nav-links a.active { color: var(--quaternary); }
+
+    main { flex: 1; padding: 50px 20px; }
+    .container {
+      max-width: 880px; margin: 0 auto; background: var(--card-bg); padding: 45px;
+      border-radius: 18px; border: 1px solid var(--border); box-shadow: 0 12px 35px rgba(0, 0, 0, 0.4);
+    }
+
+    .badge-terms {
+      display: inline-block; padding: 4px 12px; border-radius: 20px;
+      background: rgba(213, 82, 163, 0.15); color: var(--quaternary);
+      font-size: 0.82rem; font-weight: 700; text-transform: uppercase; margin-bottom: 12px;
+      border: 1px solid rgba(255, 112, 191, 0.3);
+    }
+
+    h1 { font-size: 2.2rem; color: var(--text-main); border-bottom: 1px solid var(--border); padding-bottom: 15px; margin-bottom: 15px; font-weight: 800; }
+    h2 { color: var(--quaternary); font-size: 1.3rem; margin-top: 32px; margin-bottom: 12px; font-weight: 700; }
+    p { color: var(--text-muted); margin-bottom: 16px; font-size: 0.98rem; }
+    ul { color: var(--text-muted); padding-left: 24px; margin-bottom: 18px; }
+    li { margin-bottom: 8px; }
+    strong { color: var(--text-main); }
+    a { color: var(--tertiary); text-decoration: none; font-weight: 500; }
+    a:hover { color: var(--quaternary); text-decoration: underline; }
+
+    footer { background: #08050e; border-top: 1px solid var(--border); padding: 45px 20px; text-align: center; color: var(--text-muted); font-size: 0.9rem; }
+    .footer-links { margin-bottom: 18px; }
+    .footer-links a { color: var(--text-muted); margin: 0 14px; text-decoration: none; font-weight: 500; transition: color 0.2s; }
+    .footer-links a:hover { color: var(--quaternary); }
+    .footer-legal { font-size: 0.85rem; color: #877b9f; margin-top: 8px; }
   </style>
 </head>
 <body>
-  <div class="container">
-    <a href="index.html">← Back to Home</a>
-    <h1>Terms of Service</h1>
-    <p>By downloading or using our mobile applications, these terms will automatically apply to you. You are not allowed to copy or modify the apps, any part of the apps, or our trademarks in any way.</p>
-    <h2>Changes to These Terms</h2>
-    <p>We may update our Terms and Conditions from time to time. You are advised to review this page periodically for any changes.</p>
-    <h2>Contact</h2>
-    <p>For inquiries, contact us at: your-email@gmail.com</p>
-  </div>
+
+  <!-- Header -->
+  <nav>
+    <a href="index.html" class="logo">
+      <i class="fa-solid fa-shapes" style="color: var(--quaternary);"></i> the<span>Kami</span>
+    </a>
+    <div class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="apps.html">Our Mobile Apps</a>
+      <a href="privacy-policy.html">Privacy Policy</a>
+      <a href="terms.html" class="active">Terms</a>
+      <a href="contact.html">Contact</a>
+    </div>
+  </nav>
+
+  <main>
+    <div class="container">
+      <div class="badge-terms">Legal Terms</div>
+      <h1>Terms &amp; Conditions</h1>
+      <p><strong>Last Updated:</strong> August 2026</p>
+
+      <p>Welcome to <strong>theKami</strong> ("Studio", "we", "us", or "our"), founded and developed by <strong>Kumail Raza Bangash</strong>. By downloading, accessing, or using any of our applications or games on Google Play (such as ShapeVibe, LuminaWalls, Scuba Sweep Adventure, etc.), you agree to be bound by these Terms &amp; Conditions.</p>
+
+      <h2>1. Intellectual Property &amp; License</h2>
+      <p>All source code, graphics, audio, UI layouts, animations, and branding elements within our apps are the intellectual property of Kumail Raza Bangash / theKami. We grant you a limited, revocable, non-exclusive, non-transferable license to download and use the applications for personal, non-commercial purposes on your personal devices.</p>
+
+      <h2>2. User Conduct &amp; Prohibitions</h2>
+      <p>When using our applications, you agree that you will not:</p>
+      <ul>
+        <li>Reverse engineer, decompile, disassemble, or attempt to derive the source code of our apps.</li>
+        <li>Modify, distribute, resell, or create derivative works based on our assets or databases.</li>
+        <li>Attempt to manipulate leaderboards, bypass ad units, or exploit game/app mechanics.</li>
+        <li>Use our apps in any manner that violates applicable local or international laws.</li>
+      </ul>
+
+      <h2>3. Health &amp; Fitness Disclaimer (For ShapeVibe)</h2>
+      <p><strong>ShapeVibe: Exercise &amp; Yoga</strong> is intended solely for educational, informational, and general wellness purposes. The exercise instructions, workout routines, and BMI calculations do not constitute professional medical advice or physical therapy. Always consult with a qualified physician before starting any new fitness program.</p>
+
+      <h2>4. Third-Party Services &amp; Advertisements</h2>
+      <p>Our applications may display advertisements powered by Google AdMob or link to third-party services (such as Google Play Services or Firebase). We do not control or endorse the content of third-party advertisements and are not liable for interactions between users and external advertisers.</p>
+
+      <h2>5. Disclaimer of Warranties &amp; Limitation of Liability</h2>
+      <p>Our applications are provided on an "AS IS" and "AS AVAILABLE" basis without warranties of any kind. While we strive to ensure 99.9% crash-free sessions and uninterrupted service, we do not guarantee error-free operation at all times. Under no circumstances will the developer be liable for indirect, incidental, or consequential damages.</p>
+
+      <h2>6. Termination &amp; Updates</h2>
+      <p>We reserve the right to modify, update, suspend, or discontinue any feature, application, or service at any time without prior notice. Continued use following changes implies acceptance of the revised Terms.</p>
+
+      <h2>7. Contact Information</h2>
+      <p>For any inquiries regarding these terms, please contact:</p>
+      <ul>
+        <li><strong>Developer:</strong> Kumail Raza Bangash (theKami)</li>
+        <li><strong>Email:</strong> <a href="mailto:theKami350@gmail.com">theKami350@gmail.com</a></li>
+      </ul>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <div class="footer-links">
+      <a href="index.html">Home</a>
+      <a href="apps.html">Our Mobile Apps</a>
+      <a href="privacy-policy.html">Privacy Policy</a>
+      <a href="terms.html">Terms &amp; Conditions</a>
+      <a href="contact.html">Contact Me</a>
+      <a href="app-ads.txt" target="_blank">app-ads.txt</a>
+    </div>
+    <p>&copy; 2026 <strong>theKami</strong> &bull; Kumail Raza Bangash. All Rights Reserved.</p>
+    <p class="footer-legal">Compliant with Google Play Store &amp; AdMob Advertising Policies.</p>
+    <p style="margin-top: 10px; font-size: 0.88rem;">
+      Support Email: <a href="mailto:theKami350@gmail.com" style="color: var(--quaternary); text-decoration: none; font-weight: 600;">theKami350@gmail.com</a>
+    </p>
+  </footer>
+
 </body>
 </html>
