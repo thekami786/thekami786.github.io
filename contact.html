@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Us | theKami - Kumail Raza Bangash</title>
+  <meta name="description" content="Contact Kumail Raza Bangash (theKami) for app support, business inquiries, and technical feedback.">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <style>
+    :root {
+      --primary: #462C7D;
+      --secondary: #831C91;
+      --tertiary: #D552A3;
+      --quaternary: #FF70BF;
+      --bg-dark: #0e0a17;
+      --card-bg: #181226;
+      --text-main: #f8fafc;
+      --text-muted: #b3a8c9;
+      --border: #32254d;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; font-family: 'Segoe UI', Roboto, Helvetica, sans-serif; }
+    body { background-color: var(--bg-dark); color: var(--text-main); line-height: 1.6; display: flex; flex-direction: column; min-height: 100vh; }
+
+    nav {
+      display: flex; justify-content: space-between; align-items: center; padding: 18px 8%;
+      background: rgba(14, 10, 23, 0.95); backdrop-filter: blur(12px);
+      position: sticky; top: 0; z-index: 100; border-bottom: 1px solid var(--border);
+    }
+    .logo { font-size: 1.5rem; font-weight: 800; color: var(--text-main); text-decoration: none; display: flex; align-items: center; gap: 10px; }
+    .logo span { background: linear-gradient(135deg, var(--tertiary), var(--quaternary)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+    .nav-links a { color: var(--text-muted); text-decoration: none; margin-left: 22px; transition: color 0.3s; font-size: 0.95rem; font-weight: 600; }
+    .nav-links a:hover, .nav-links a.active { color: var(--quaternary); }
+
+    main { flex: 1; padding: 50px 20px; }
+    .container { max-width: 960px; margin: 0 auto; }
+    
+    .contact-grid {
+      display: grid; grid-template-columns: 1fr 1.2fr; gap: 35px; margin-top: 30px;
+    }
+    @media (max-width: 768px) { .contact-grid { grid-template-columns: 1fr; } }
+
+    .contact-info {
+      background: var(--card-bg); padding: 35px; border-radius: 18px; border: 1px solid var(--border);
+    }
+    .contact-info h2 { font-size: 1.6rem; color: var(--text-main); margin-bottom: 12px; }
+    .contact-info p { color: var(--text-muted); margin-bottom: 25px; font-size: 0.95rem; }
+
+    .info-item { display: flex; align-items: flex-start; gap: 16px; margin-bottom: 22px; }
+    .info-icon {
+      width: 44px; height: 44px; border-radius: 12px; background: rgba(213, 82, 163, 0.15);
+      color: var(--quaternary); display: flex; align-items: center; justify-content: center; font-size: 1.1rem;
+      border: 1px solid rgba(255, 112, 191, 0.25); flex-shrink: 0;
+    }
+    .info-text h4 { font-size: 0.9rem; color: var(--text-muted); text-transform: uppercase; letter-spacing: 0.5px; }
+    .info-text a, .info-text span { color: var(--text-main); font-weight: 600; text-decoration: none; font-size: 1rem; }
+    .info-text a:hover { color: var(--quaternary); }
+
+    .contact-form-card {
+      background: var(--card-bg); padding: 35px; border-radius: 18px; border: 1px solid var(--border);
+    }
+    .contact-form-card h2 { font-size: 1.6rem; color: var(--text-main); margin-bottom: 20px; }
+    
+    .form-group { margin-bottom: 18px; }
+    .form-group label { display: block; margin-bottom: 8px; color: var(--text-muted); font-size: 0.9rem; font-weight: 600; }
+    .form-control {
+      width: 100%; padding: 12px 16px; background: #0e0a17; border: 1px solid var(--border);
+      border-radius: 10px; color: var(--text-main); font-size: 0.95rem; outline: none; transition: border-color 0.25s;
+    }
+    .form-control:focus { border-color: var(--quaternary); }
+    textarea.form-control { resize: vertical; min-height: 120px; }
+
+    .btn-submit {
+      width: 100%; padding: 13px; border: none; border-radius: 10px;
+      background: linear-gradient(135deg, var(--secondary), var(--tertiary));
+      color: #fff; font-size: 1rem; font-weight: 700; cursor: pointer; transition: 0.3s;
+      display: inline-flex; align-items: center; justify-content: center; gap: 8px;
+    }
+    .btn-submit:hover { background: linear-gradient(135deg, var(--tertiary), var(--quaternary)); box-shadow: 0 4px 18px rgba(255, 112, 191, 0.4); }
+
+    footer { background: #08050e; border-top: 1px solid var(--border); padding: 45px 20px; text-align: center; color: var(--text-muted); font-size: 0.9rem; }
+    .footer-links { margin-bottom: 18px; }
+    .footer-links a { color: var(--text-muted); margin: 0 14px; text-decoration: none; font-weight: 500; transition: color 0.2s; }
+    .footer-links a:hover { color: var(--quaternary); }
+    .footer-legal { font-size: 0.85rem; color: #877b9f; margin-top: 8px; }
+  </style>
+</head>
+<body>
+
+  <!-- Header -->
+  <nav>
+    <a href="index.html" class="logo">
+      <i class="fa-solid fa-shapes" style="color: var(--quaternary);"></i> the<span>Kami</span>
+    </a>
+    <div class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="apps.html">Our Mobile Apps</a>
+      <a href="privacy-policy.html">Privacy Policy</a>
+      <a href="terms.html">Terms</a>
+      <a href="contact.html" class="active">Contact</a>
+    </div>
+  </nav>
+
+  <main>
+    <div class="container">
+      <div class="contact-grid">
+        
+        <!-- Info Column -->
+        <div class="contact-info">
+          <h2>Get In Touch</h2>
+          <p>Have questions regarding our mobile apps, account data deletion, or potential collaborations? Feel free to reach out anytime.</p>
+
+          <div class="info-item">
+            <div class="info-icon"><i class="fa-solid fa-envelope"></i></div>
+            <div class="info-text">
+              <h4>Direct Email</h4>
+              <a href="mailto:theKami350@gmail.com">theKami350@gmail.com</a>
+            </div>
+          </div>
+
+          <div class="info-item">
+            <div class="info-icon"><i class="fa-solid fa-user-tie"></i></div>
+            <div class="info-text">
+              <h4>Developer &amp; Founder</h4>
+              <span>Kumail Raza Bangash</span>
+            </div>
+          </div>
+
+          <div class="info-item">
+            <div class="info-icon"><i class="fa-solid fa-location-dot"></i></div>
+            <div class="info-text">
+              <h4>Location</h4>
+              <span>Pakistan</span>
+            </div>
+          </div>
+
+          <div class="info-item">
+            <div class="info-icon"><i class="fa-solid fa-globe"></i></div>
+            <div class="info-text">
+              <h4>Portfolio &amp; Projects</h4>
+              <a href="https://kumailportfolio.freehosting.dev" target="_blank" rel="noopener">kumailportfolio.freehosting.dev</a>
+            </div>
+          </div>
+
+          <div class="info-item">
+            <div class="info-icon"><i class="fa-brands fa-github"></i></div>
+            <div class="info-text">
+              <h4>GitHub Repository</h4>
+              <a href="https://github.com/thekami786" target="_blank" rel="noopener">github.com/thekami786</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Form Column -->
+        <div class="contact-form-card">
+          <h2>Send a Message</h2>
+          <form action="mailto:theKami350@gmail.com" method="post" enctype="text/plain">
+            <div class="form-group">
+              <label for="name">Your Name</label>
+              <input type="text" id="name" name="name" class="form-control" placeholder="e.g. John Doe" required>
+            </div>
+            <div class="form-group">
+              <label for="email">Your Email</label>
+              <input type="email" id="email" name="email" class="form-control" placeholder="e.g. john@example.com" required>
+            </div>
+            <div class="form-group">
+              <label for="subject">App / Subject</label>
+              <input type="text" id="subject" name="subject" class="form-control" placeholder="e.g. ShapeVibe Feedback or Support" required>
+            </div>
+            <div class="form-group">
+              <label for="message">Message</label>
+              <textarea id="message" name="message" class="form-control" placeholder="Write your message here..." required></textarea>
+            </div>
+            <button type="submit" class="btn-submit"><i class="fa-solid fa-paper-plane"></i> Send Email Message</button>
+          </form>
+        </div>
+
+      </div>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <div class="footer-links">
+      <a href="index.html">Home</a>
+      <a href="apps.html">Our Mobile Apps</a>
+      <a href="privacy-policy.html">Privacy Policy</a>
+      <a href="terms.html">Terms &amp; Conditions</a>
+      <a href="contact.html">Contact Me</a>
+      <a href="app-ads.txt" target="_blank">app-ads.txt</a>
+    </div>
+    <p>&copy; 2026 <strong>theKami</strong> &bull; Kumail Raza Bangash. All Rights Reserved.</p>
+    <p class="footer-legal">Compliant with Google Play Store &amp; AdMob Advertising Policies.</p>
+    <p style="margin-top: 10px; font-size: 0.88rem;">
+      Support Email: <a href="mailto:theKami350@gmail.com" style="color: var(--quaternary); text-decoration: none; font-weight: 600;">theKami350@gmail.com</a>
+    </p>
+  </footer>
+
+</body>
+</html>
