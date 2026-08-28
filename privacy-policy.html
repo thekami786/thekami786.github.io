@@ -3,58 +3,211 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Privacy Policy | Kami Studio</title>
+  <title>Privacy Policy | theKami - Kumail Raza Bangash</title>
+  <meta name="description" content="Official Privacy Policy for mobile applications and games published by theKami (Kumail Raza Bangash).">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
   <style>
+    :root {
+      --bg-color: #0b1120;
+      --card-bg: #1e293b;
+      --accent: #38bdf8;
+      --accent-hover: #0ea5e9;
+      --text-main: #f8fafc;
+      --text-muted: #cbd5e1;
+      --border: #334155;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+    }
+
     body {
-      background-color: #0f172a;
-      color: #f8fafc;
-      font-family: 'Segoe UI', Roboto, sans-serif;
-      line-height: 1.7;
+      background-color: var(--bg-color);
+      color: var(--text-main);
+      line-height: 1.75;
       padding: 40px 20px;
     }
+
     .container {
-      max-width: 800px;
+      max-width: 860px;
       margin: 0 auto;
-      background: #1e293b;
-      padding: 40px;
-      border-radius: 12px;
-      border: 1px solid #334155;
+      background: var(--card-bg);
+      padding: 45px;
+      border-radius: 16px;
+      border: 1px solid var(--border);
+      box-shadow: 0 12px 35px rgba(0, 0, 0, 0.4);
     }
-    h1, h2 { color: #38bdf8; margin-top: 24px; }
-    h1 { font-size: 2rem; border-bottom: 1px solid #334155; padding-bottom: 10px; margin-top: 0; }
-    p, ul { color: #cbd5e1; margin-bottom: 15px; }
-    ul { padding-left: 20px; }
-    a { color: #38bdf8; text-decoration: none; }
-    .back-btn { display: inline-block; margin-bottom: 20px; color: #38bdf8; }
+
+    .back-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      margin-bottom: 25px;
+      color: var(--accent);
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 0.95rem;
+      transition: color 0.2s;
+    }
+
+    .back-btn:hover {
+      color: var(--accent-hover);
+      text-decoration: underline;
+    }
+
+    .policy-badge {
+      display: inline-block;
+      padding: 4px 12px;
+      border-radius: 20px;
+      background: rgba(56, 189, 248, 0.15);
+      color: var(--accent);
+      font-size: 0.82rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      margin-bottom: 12px;
+      border: 1px solid rgba(56, 189, 248, 0.3);
+    }
+
+    h1 {
+      font-size: 2.2rem;
+      color: var(--text-main);
+      border-bottom: 1px solid var(--border);
+      padding-bottom: 15px;
+      margin-bottom: 15px;
+      font-weight: 800;
+    }
+
+    h2 {
+      color: var(--accent);
+      font-size: 1.3rem;
+      margin-top: 32px;
+      margin-bottom: 12px;
+      font-weight: 700;
+    }
+
+    p {
+      color: var(--text-muted);
+      margin-bottom: 16px;
+      font-size: 0.98rem;
+    }
+
+    ul {
+      color: var(--text-muted);
+      padding-left: 24px;
+      margin-bottom: 18px;
+    }
+
+    li {
+      margin-bottom: 8px;
+    }
+
+    strong {
+      color: var(--text-main);
+    }
+
+    code {
+      background-color: #0b1120;
+      padding: 2px 6px;
+      border-radius: 4px;
+      color: var(--accent);
+      font-size: 0.9em;
+      border: 1px solid var(--border);
+    }
+
+    a {
+      color: var(--accent);
+      text-decoration: none;
+      font-weight: 500;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    .footer {
+      text-align: center;
+      margin-top: 45px;
+      padding-top: 20px;
+      border-top: 1px solid var(--border);
+      font-size: 0.88rem;
+      color: #94a3b8;
+    }
+
+    @media (max-width: 600px) {
+      .container {
+        padding: 25px 20px;
+      }
+      h1 {
+        font-size: 1.7rem;
+      }
+    }
   </style>
 </head>
 <body>
+
   <div class="container">
-    <a href="index.html" class="back-btn">← Back to Home</a>
+    <a href="index.html" class="back-btn"><i class="fa-solid fa-arrow-left"></i> Back to theKami Studio</a>
+    
+    <div class="policy-badge">Official Policy</div>
     <h1>Privacy Policy</h1>
-    <p>Last updated: August 2026</p>
+    <p><strong>Last Updated:</strong> August 2026</p>
 
-    <p>This Privacy Policy applies to all mobile applications developed and published by <strong>Kami Studio</strong> ("we", "our", or "us").</p>
+    <p>This Privacy Policy outlines how <strong>theKami</strong> ("we", "our", or "us"), founded and maintained by <strong>Kumail Raza Bangash</strong>, handles user data across all our published mobile applications and games on Google Play, including but not limited to <strong>ShapeVibe: Exercise &amp; Yoga</strong>, <strong>LuminaWalls: 4K &amp; Live Wallpapers</strong>, <strong>Scuba Sweep Adventure</strong>, and associated utility services.</p>
 
-    <h2>1. Information We Collect</h2>
-    <p>Our applications do not collect personally identifiable information (such as your name, address, or phone number) directly, unless you contact us for support.</p>
-
-    <h2>2. Third-Party Services & Advertising</h2>
-    <p>Our applications may use third-party services that may collect information used to identify you. These include:</p>
+    <h2>1. Information We Collect &amp; How It Is Used</h2>
+    <p>We prioritize user privacy and adhere strictly to data minimization principles:</p>
     <ul>
-      <li><strong>Google AdMob</strong> (for displaying ads): AdMob collects device identifiers and usage statistics to serve personalized and non-personalized advertisements.</li>
-      <li><strong>Google Play Services</strong></li>
-      <li><strong>Firebase Analytics & Crashlytics</strong> (for crash reporting and app performance)</li>
+      <li><strong>Local App Data:</strong> Personal settings, workout routines, fitness streaks, water logs, custom favorites, and gameplay scores are saved locally on your device via secure local storage (<code>SharedPreferences</code>).</li>
+      <li><strong>Account Information (Optional):</strong> If you choose to sign in via Google Sign-In or email/password, basic profile details (such as display name, avatar, and authentication token) are processed securely through <strong>Google Firebase Authentication</strong> to synchronize your data across devices.</li>
+      <li><strong>No Sensitive Personal Data:</strong> We do not track precise GPS locations, sell your personal information, or access contacts, microphone, or camera without explicit context-specific permissions.</li>
     </ul>
 
-    <h2>3. Permissions</h2>
-    <p>Our apps may request certain permissions (such as Internet access, Network State, or Storage) only when necessary for app features to function properly.</p>
+    <h2>2. Third-Party SDKs &amp; Advertising Compliance</h2>
+    <p>To provide high-quality free applications and ongoing feature updates, our apps integrate reputable third-party SDKs that comply with Google Play Developer and Data Safety requirements:</p>
+    <ul>
+      <li><strong>Google Mobile Ads (AdMob):</strong> Used to deliver policy-compliant banner, interstitial, and rewarded ads. AdMob may process non-personal device identifiers (such as Advertising ID) to serve personalized or non-personalized ads in accordance with <a href="https://policies.google.com/technologies/ads" target="_blank" rel="noopener">Google Advertising Policies</a>.</li>
+      <li><strong>Google Firebase (Auth, Firestore, Cloud Storage):</strong> Used to provide cloud authentication and real-time database synchronization with end-to-end TLS encryption.</li>
+      <li><strong>Google Play Services:</strong> Used to ensure application integrity, licensing, and standard in-app delivery.</li>
+    </ul>
 
-    <h2>4. Children's Privacy</h2>
-    <p>We do not knowingly collect personal identifiable information from children under 13. If you believe your child has provided us with personal information, please contact us so we can take immediate action.</p>
+    <h2>3. Account &amp; Data Deletion (Google Play Compliance)</h2>
+    <p>In full compliance with Google Play User Data and Account Deletion policies, you maintain complete ownership of your data:</p>
+    <ul>
+      <li><strong>In-App Deletion:</strong> You can permanently delete your user account and all associated cloud-synced workout or game data at any time from within the app settings.</li>
+      <li><strong>Manual Request:</strong> You can request full deletion of all stored data and account records by emailing us directly at <a href="mailto:theKami350@gmail.com">theKami350@gmail.com</a>. All records will be completely expunged within 48 hours.</li>
+    </ul>
 
-    <h2>5. Contact Us</h2>
-    <p>If you have any questions or suggestions about our Privacy Policy, do not hesitate to contact us at: <a href="mailto:your-email@gmail.com">your-email@gmail.com</a></p>
+    <h2>4. Device Permissions</h2>
+    <p>Our applications request permissions only when strictly necessary for core features:</p>
+    <ul>
+      <li><code>INTERNET</code> &amp; <code>ACCESS_NETWORK_STATE</code>: To load ad banners, sync cloud workouts/scores, and download wallpaper assets.</li>
+      <li><code>POST_NOTIFICATIONS</code>: Optional permission (Android 13+) used solely to send your daily workout alarms and reminder alerts.</li>
+      <li><code>SET_WALLPAPER</code> / <code>RECEIVE_BOOT_COMPLETED</code>: Used exclusively by LuminaWalls for background wallpaper rotation.</li>
+    </ul>
+
+    <h2>5. Children's Privacy</h2>
+    <p>Our apps do not knowingly collect personally identifiable information from children under the age of 13. If you believe that personal data has been inadvertently provided by a minor, please contact us immediately so we can promptly delete it.</p>
+
+    <h2>6. Changes to This Policy</h2>
+    <p>We may update this Privacy Policy from time to time to align with new features or legal requirements. Any modifications will be published on this page with an updated timestamp.</p>
+
+    <h2>7. Contact Information</h2>
+    <p>If you have any questions, suggestions, or data deletion inquiries regarding our apps or this policy, please reach out to:</p>
+    <ul>
+      <li><strong>Developer:</strong> Kumail Raza Bangash (theKami)</li>
+      <li><strong>Official Email:</strong> <a href="mailto:theKami350@gmail.com">theKami350@gmail.com</a></li>
+      <li><strong>Portfolio:</strong> <a href="https://kumailportfolio.freehosting.dev" target="_blank" rel="noopener">https://kumailportfolio.freehosting.dev</a></li>
+      <li><strong>GitHub:</strong> <a href="https://github.com/thekami786" target="_blank" rel="noopener">https://github.com/thekami786</a></li>
+    </ul>
+
+    <div class="footer">
+      &copy; 2026 <strong>theKami</strong> &bull; Kumail Raza Bangash. All Rights Reserved.
+    </div>
   </div>
+
 </body>
 </html>
