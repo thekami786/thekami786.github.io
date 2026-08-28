@@ -8,257 +8,96 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
   <style>
     :root {
-      --bg-color: #0b1120;
-      --card-bg: #1e293b;
-      --accent: #38bdf8;
-      --accent-hover: #0ea5e9;
+      --primary: #462C7D;
+      --secondary: #831C91;
+      --tertiary: #D552A3;
+      --quaternary: #FF70BF;
+      --bg-dark: #0e0a17;
+      --card-bg: #181226;
       --text-main: #f8fafc;
-      --text-muted: #cbd5e1;
-      --border: #334155;
+      --text-muted: #b3a8c9;
+      --border: #32254d;
     }
 
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-      font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
-    }
+    * { box-sizing: border-box; margin: 0; padding: 0; font-family: 'Segoe UI', Roboto, Helvetica, sans-serif; }
+    body { background-color: var(--bg-dark); color: var(--text-main); line-height: 1.75; display: flex; flex-direction: column; min-height: 100vh; }
 
-    body {
-      background-color: var(--bg-color);
-      color: var(--text-main);
-      line-height: 1.75;
-      display: flex;
-      flex-direction: column;
-      min-height: 100vh;
-    }
-
-    /* Navigation Header */
     nav {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 18px 8%;
-      background: rgba(11, 17, 32, 0.95);
-      backdrop-filter: blur(12px);
-      position: sticky;
-      top: 0;
-      z-index: 100;
-      border-bottom: 1px solid var(--border);
+      display: flex; justify-content: space-between; align-items: center; padding: 18px 8%;
+      background: rgba(14, 10, 23, 0.95); backdrop-filter: blur(12px);
+      position: sticky; top: 0; z-index: 100; border-bottom: 1px solid var(--border);
     }
+    .logo { font-size: 1.5rem; font-weight: 800; color: var(--text-main); text-decoration: none; display: flex; align-items: center; gap: 10px; }
+    .logo span { background: linear-gradient(135deg, var(--tertiary), var(--quaternary)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+    .nav-links a { color: var(--text-muted); text-decoration: none; margin-left: 22px; transition: color 0.3s; font-size: 0.95rem; font-weight: 600; }
+    .nav-links a:hover, .nav-links a.active { color: var(--quaternary); }
 
-    .logo {
-      font-size: 1.45rem;
-      font-weight: 800;
-      color: var(--text-main);
-      text-decoration: none;
-      display: flex;
-      align-items: center;
-      gap: 10px;
-      letter-spacing: -0.5px;
-    }
-
-    .logo span {
-      color: var(--accent);
-    }
-
-    .nav-links a {
-      color: var(--text-muted);
-      text-decoration: none;
-      margin-left: 20px;
-      transition: color 0.3s;
-      font-size: 0.95rem;
-      font-weight: 500;
-    }
-
-    .nav-links a:hover,
-    .nav-links a.active {
-      color: var(--accent);
-    }
-
-    /* Main Policy Container */
-    main {
-      flex: 1;
-      padding: 50px 20px;
-    }
-
+    main { flex: 1; padding: 50px 20px; }
     .container {
-      max-width: 900px;
-      margin: 0 auto;
-      background: var(--card-bg);
-      padding: 45px;
-      border-radius: 16px;
-      border: 1px solid var(--border);
-      box-shadow: 0 12px 35px rgba(0, 0, 0, 0.4);
+      max-width: 880px; margin: 0 auto; background: var(--card-bg); padding: 45px;
+      border-radius: 18px; border: 1px solid var(--border); box-shadow: 0 12px 35px rgba(0, 0, 0, 0.4);
     }
 
-    .back-btn {
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-      margin-bottom: 22px;
-      color: var(--accent);
-      text-decoration: none;
-      font-weight: 600;
-      font-size: 0.95rem;
-      transition: color 0.2s;
+    .badge-policy {
+      display: inline-block; padding: 4px 12px; border-radius: 20px;
+      background: rgba(213, 82, 163, 0.15); color: var(--quaternary);
+      font-size: 0.82rem; font-weight: 700; text-transform: uppercase; margin-bottom: 12px;
+      border: 1px solid rgba(255, 112, 191, 0.3);
     }
 
-    .back-btn:hover {
-      color: var(--accent-hover);
-      text-decoration: underline;
-    }
+    h1 { font-size: 2.2rem; color: var(--text-main); border-bottom: 1px solid var(--border); padding-bottom: 15px; margin-bottom: 15px; font-weight: 800; }
+    h2 { color: var(--quaternary); font-size: 1.3rem; margin-top: 32px; margin-bottom: 12px; font-weight: 700; }
+    p { color: var(--text-muted); margin-bottom: 16px; font-size: 0.98rem; }
+    ul { color: var(--text-muted); padding-left: 24px; margin-bottom: 18px; }
+    li { margin-bottom: 8px; }
+    strong { color: var(--text-main); }
+    code { background-color: #0e0a17; padding: 2px 6px; border-radius: 4px; color: var(--quaternary); font-size: 0.9em; border: 1px solid var(--border); }
+    a { color: var(--tertiary); text-decoration: none; font-weight: 500; }
+    a:hover { color: var(--quaternary); text-decoration: underline; }
 
-    .policy-badge {
-      display: inline-block;
-      padding: 4px 12px;
-      border-radius: 20px;
-      background: rgba(56, 189, 248, 0.15);
-      color: var(--accent);
-      font-size: 0.82rem;
-      font-weight: 700;
-      text-transform: uppercase;
-      letter-spacing: 0.5px;
-      margin-bottom: 12px;
-      border: 1px solid rgba(56, 189, 248, 0.3);
-    }
-
-    h1 {
-      font-size: 2.2rem;
-      color: var(--text-main);
-      border-bottom: 1px solid var(--border);
-      padding-bottom: 15px;
-      margin-bottom: 15px;
-      font-weight: 800;
-    }
-
-    h2 {
-      color: var(--accent);
-      font-size: 1.3rem;
-      margin-top: 32px;
-      margin-bottom: 12px;
-      font-weight: 700;
-    }
-
-    p {
-      color: var(--text-muted);
-      margin-bottom: 16px;
-      font-size: 0.98rem;
-    }
-
-    ul {
-      color: var(--text-muted);
-      padding-left: 24px;
-      margin-bottom: 18px;
-    }
-
-    li {
-      margin-bottom: 8px;
-    }
-
-    strong {
-      color: var(--text-main);
-    }
-
-    code {
-      background-color: #0b1120;
-      padding: 2px 6px;
-      border-radius: 4px;
-      color: var(--accent);
-      font-size: 0.9em;
-      border: 1px solid var(--border);
-    }
-
-    a {
-      color: var(--accent);
-      text-decoration: none;
-      font-weight: 500;
-    }
-
-    a:hover {
-      text-decoration: underline;
-    }
-
-    /* Footer */
-    footer {
-      background: #070a12;
-      border-top: 1px solid var(--border);
-      padding: 45px 20px;
-      text-align: center;
-      color: var(--text-muted);
-      font-size: 0.9rem;
-    }
-
-    .footer-links {
-      margin-bottom: 18px;
-    }
-
-    .footer-links a {
-      color: var(--text-muted);
-      margin: 0 14px;
-      text-decoration: none;
-      font-weight: 500;
-      transition: color 0.2s;
-    }
-
-    .footer-links a:hover {
-      color: var(--accent);
-    }
-
-    .footer-legal {
-      font-size: 0.85rem;
-      color: #64748b;
-      margin-top: 10px;
-    }
-
-    @media (max-width: 600px) {
-      .container {
-        padding: 25px 20px;
-      }
-      h1 {
-        font-size: 1.7rem;
-      }
-    }
+    footer { background: #08050e; border-top: 1px solid var(--border); padding: 45px 20px; text-align: center; color: var(--text-muted); font-size: 0.9rem; }
+    .footer-links { margin-bottom: 18px; }
+    .footer-links a { color: var(--text-muted); margin: 0 14px; text-decoration: none; font-weight: 500; transition: color 0.2s; }
+    .footer-links a:hover { color: var(--quaternary); }
+    .footer-legal { font-size: 0.85rem; color: #877b9f; margin-top: 8px; }
   </style>
 </head>
 <body>
 
-  <!-- Navigation Header -->
+  <!-- Header -->
   <nav>
     <a href="index.html" class="logo">
-      <i class="fa-solid fa-shapes" style="color: var(--accent);"></i> the<span>Kami</span>
+      <i class="fa-solid fa-shapes" style="color: var(--quaternary);"></i> the<span>Kami</span>
     </a>
     <div class="nav-links">
-      <a href="index.html#apps">Applications</a>
+      <a href="index.html">Home</a>
+      <a href="apps.html">Our Mobile Apps</a>
       <a href="privacy-policy.html" class="active">Privacy Policy</a>
       <a href="terms.html">Terms</a>
-      <a href="#contact">Contact</a>
+      <a href="contact.html">Contact</a>
     </div>
   </nav>
 
-  <!-- Main Content -->
   <main>
     <div class="container">
-      <a href="index.html" class="back-btn"><i class="fa-solid fa-arrow-left"></i> Back to theKami Studio</a>
-      
-      <div class="policy-badge">Official Policy</div>
+      <div class="badge-policy">Official Legal Policy</div>
       <h1>Privacy Policy</h1>
       <p><strong>Last Updated:</strong> August 2026</p>
 
-      <p>This Privacy Policy outlines how <strong>theKami</strong> ("we", "our", or "us"), founded and operated by <strong>Kumail Raza Bangash</strong>, handles user data across all our published mobile applications and games on Google Play, including but not limited to <strong>ShapeVibe: Exercise &amp; Yoga</strong>, <strong>LuminaWalls: 4K &amp; Live Wallpapers</strong>, <strong>Scuba Sweep Adventure</strong>, and associated services.</p>
+      <p>This Privacy Policy outlines how <strong>theKami</strong> ("we", "our", or "us"), founded and managed by <strong>Kumail Raza Bangash</strong>, handles user data across all our published mobile applications and games on Google Play, including but not limited to <strong>ShapeVibe: Exercise &amp; Yoga</strong>, <strong>LuminaWalls: 4K &amp; Live Wallpapers</strong>, <strong>Scuba Sweep Adventure</strong>, and related utility tools.</p>
 
       <h2>1. Information We Collect &amp; How It Is Used</h2>
       <p>We prioritize user privacy and adhere strictly to data minimization principles:</p>
       <ul>
-        <li><strong>Local App Data:</strong> Personal settings, workout routines, fitness streaks, water logs, custom favorites, and gameplay scores are saved locally on your device via secure local storage (<code>SharedPreferences</code>).</li>
-        <li><strong>Account Information (Optional):</strong> If you choose to sign in via Google Sign-In or email/password, basic profile details (such as display name, avatar, and authentication token) are processed securely through <strong>Google Firebase Authentication</strong> to synchronize your data across devices.</li>
+        <li><strong>Local App Data:</strong> Personal settings, workout routines, fitness streaks, water intake logs, wallpaper favorites, and gameplay scores are saved locally on your device via secure local storage (<code>SharedPreferences</code>).</li>
+        <li><strong>Account Information (Optional):</strong> If you choose to sign in via Google Sign-In or email/password, basic profile details (display name, avatar, and authentication ID) are processed securely through <strong>Google Firebase Authentication</strong> to synchronize your data across devices.</li>
         <li><strong>No Sensitive Personal Data:</strong> We do not track precise GPS locations, sell your personal information, or access contacts, microphone, or camera without explicit context-specific permissions.</li>
       </ul>
 
       <h2>2. Third-Party SDKs &amp; Advertising Compliance</h2>
       <p>To provide high-quality free applications and ongoing feature updates, our apps integrate reputable third-party SDKs that comply with Google Play Developer and Data Safety requirements:</p>
       <ul>
-        <li><strong>Google Mobile Ads (AdMob):</strong> Used to deliver policy-compliant banner, interstitial, and rewarded ads. AdMob may process non-personal device identifiers (such as Advertising ID) to serve personalized or non-personalized ads in accordance with <a href="https://policies.google.com/technologies/ads" target="_blank" rel="noopener">Google Advertising Policies</a>.</li>
+        <li><strong>Google Mobile Ads (AdMob):</strong> Used to deliver policy-compliant banner, interstitial, and rewarded ads. AdMob may process non-personal device identifiers (such as Advertising ID) in accordance with <a href="https://policies.google.com/technologies/ads" target="_blank" rel="noopener">Google Advertising Policies</a>.</li>
         <li><strong>Google Firebase (Auth, Firestore, Cloud Storage):</strong> Used to provide cloud authentication and real-time database synchronization with end-to-end TLS encryption.</li>
         <li><strong>Google Play Services:</strong> Used to ensure application integrity, licensing, and standard in-app delivery.</li>
       </ul>
@@ -296,18 +135,19 @@
   </main>
 
   <!-- Footer -->
-  <footer id="contact">
+  <footer>
     <div class="footer-links">
+      <a href="index.html">Home</a>
+      <a href="apps.html">Our Mobile Apps</a>
       <a href="privacy-policy.html">Privacy Policy</a>
-      <a href="terms.html">Terms of Service</a>
+      <a href="terms.html">Terms &amp; Conditions</a>
+      <a href="contact.html">Contact Me</a>
       <a href="app-ads.txt" target="_blank">app-ads.txt</a>
-      <a href="https://github.com/thekami786" target="_blank" rel="noopener"><i class="fa-brands fa-github"></i> GitHub</a>
     </div>
-    <p>&copy; 2026 <strong>theKami</strong> (Kumail Raza Bangash). All rights reserved.</p>
-    <p class="footer-legal">Fully compliant with Google Play Developer &amp; AdMob Advertising Policies.</p>
+    <p>&copy; 2026 <strong>theKami</strong> &bull; Kumail Raza Bangash. All Rights Reserved.</p>
+    <p class="footer-legal">Compliant with Google Play Store &amp; AdMob Advertising Policies.</p>
     <p style="margin-top: 10px; font-size: 0.88rem;">
-      Support &amp; Inquiries: 
-      <a href="mailto:theKami350@gmail.com" style="color: var(--accent); text-decoration: none; font-weight: 600;">theKami350@gmail.com</a>
+      Support Email: <a href="mailto:theKami350@gmail.com" style="color: var(--quaternary); text-decoration: none; font-weight: 600;">theKami350@gmail.com</a>
     </p>
   </footer>
 
