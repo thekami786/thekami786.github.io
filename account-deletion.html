@@ -22,8 +22,10 @@
       --success: #10b981;
       --accent: #38bdf8;
     }
+
     * { box-sizing: border-box; margin: 0; padding: 0; font-family: 'Segoe UI', Roboto, Helvetica, sans-serif; }
     body { background-color: var(--bg-dark); color: var(--text-main); line-height: 1.6; display: flex; flex-direction: column; min-height: 100vh; }
+
     /* Navigation */
     nav {
       display: flex; justify-content: space-between; align-items: center; padding: 18px 8%;
@@ -38,3 +40,390 @@
       color: var(--text-muted); text-decoration: none; margin-left: 22px; transition: color 0.3s; font-size: 0.95rem; font-weight: 600;
     }
     .nav-links a:hover, .nav-links a.active { color: var(--quaternary); }
+
+    /* Hero */
+    .hero {
+      text-align: center; padding: 60px 20px 35px; max-width: 900px; margin: 0 auto;
+    }
+    .dev-badge {
+      display: inline-flex; align-items: center; gap: 8px; padding: 6px 16px; border-radius: 30px;
+      background: rgba(213, 82, 163, 0.15); color: var(--quaternary); font-size: 0.88rem; font-weight: 600;
+      border: 1px solid rgba(255, 112, 191, 0.3); margin-bottom: 18px;
+    }
+    .hero h1 {
+      font-size: 2.6rem; font-weight: 800; margin-bottom: 14px; line-height: 1.2;
+      background: linear-gradient(135deg, #ffffff 0%, var(--quaternary) 100%);
+      -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+    }
+    .hero p { color: var(--text-muted); font-size: 1.08rem; max-width: 780px; margin: 0 auto; }
+
+    /* Main Container */
+    .container { max-width: 1050px; margin: 0 auto; padding: 0 20px; flex: 1; margin-bottom: 60px; }
+
+    /* Policy Overview Box */
+    .policy-box {
+      background: var(--card-bg);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 28px;
+      margin-bottom: 35px;
+      box-shadow: 0 8px 30px rgba(0, 0, 0, 0.3);
+    }
+    .policy-box h2 {
+      font-size: 1.4rem;
+      color: var(--text-main);
+      margin-bottom: 12px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .policy-box p {
+      color: var(--text-muted);
+      font-size: 0.98rem;
+      margin-bottom: 14px;
+    }
+
+    /* App Selection Section */
+    .section-title {
+      font-size: 1.8rem;
+      font-weight: 700;
+      margin: 40px 0 20px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .section-title span {
+      background: linear-gradient(135deg, var(--tertiary), var(--quaternary));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    /* App Specific Cards */
+    .apps-list { display: flex; flex-direction: column; gap: 24px; }
+    .app-item {
+      background: var(--card-bg);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 28px;
+      transition: all 0.3s ease;
+    }
+    .app-item:hover {
+      border-color: var(--tertiary);
+    }
+    .app-item-header {
+      display: flex;
+      align-items: center;
+      gap: 18px;
+      margin-bottom: 20px;
+      padding-bottom: 16px;
+      border-bottom: 1px solid var(--border);
+    }
+    .app-item-icon {
+      width: 64px;
+      height: 64px;
+      border-radius: 14px;
+      object-fit: cover;
+      border: 1px solid var(--border);
+      background: #120d20;
+      flex-shrink: 0;
+    }
+    .app-item-info h3 {
+      font-size: 1.3rem;
+      color: var(--text-main);
+      margin-bottom: 4px;
+    }
+    .app-pkg {
+      font-size: 0.85rem;
+      color: var(--quaternary);
+      font-family: monospace;
+      background: rgba(70, 44, 125, 0.4);
+      padding: 2px 8px;
+      border-radius: 6px;
+      display: inline-block;
+    }
+    .developer-tag {
+      font-size: 0.85rem;
+      color: var(--text-muted);
+      margin-left: 10px;
+    }
+
+    /* Step guides */
+    .step-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 20px;
+      margin-top: 15px;
+    }
+    .step-card {
+      background: rgba(70, 44, 125, 0.2);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 20px;
+    }
+    .step-card h4 {
+      font-size: 1.05rem;
+      color: var(--text-main);
+      margin-bottom: 12px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .step-card ol, .step-card ul {
+      padding-left: 20px;
+      color: var(--text-muted);
+      font-size: 0.92rem;
+    }
+    .step-card li { margin-bottom: 8px; }
+
+    .data-summary {
+      margin-top: 18px;
+      background: rgba(14, 10, 23, 0.6);
+      border-radius: 10px;
+      padding: 16px;
+      font-size: 0.9rem;
+    }
+    .data-summary strong { color: var(--text-main); }
+    .data-summary ul { padding-left: 20px; color: var(--text-muted); margin-top: 6px; }
+
+    /* Web Request / Email Action Box */
+    .action-box {
+      background: linear-gradient(135deg, rgba(70, 44, 125, 0.4), rgba(131, 28, 145, 0.3));
+      border: 1px solid var(--tertiary);
+      border-radius: 16px;
+      padding: 35px 25px;
+      text-align: center;
+      margin-top: 40px;
+    }
+    .action-box h3 {
+      font-size: 1.5rem;
+      margin-bottom: 10px;
+      color: var(--text-main);
+    }
+    .action-box p {
+      color: var(--text-muted);
+      max-width: 650px;
+      margin: 0 auto 20px;
+      font-size: 0.98rem;
+    }
+    .btn-mail {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      background: linear-gradient(135deg, var(--secondary), var(--tertiary));
+      color: #fff;
+      text-decoration: none;
+      font-weight: 700;
+      padding: 14px 30px;
+      border-radius: 12px;
+      font-size: 1rem;
+      transition: all 0.3s ease;
+      box-shadow: 0 4px 20px rgba(213, 82, 163, 0.4);
+    }
+    .btn-mail:hover {
+      background: linear-gradient(135deg, var(--tertiary), var(--quaternary));
+      transform: translateY(-2px);
+    }
+
+    /* Footer */
+    footer { background: #08050e; border-top: 1px solid var(--border); padding: 45px 20px; text-align: center; color: var(--text-muted); font-size: 0.9rem; }
+    .footer-links { margin-bottom: 18px; }
+    .footer-links a { color: var(--text-muted); margin: 0 14px; text-decoration: none; font-weight: 500; transition: color 0.2s; }
+    .footer-links a:hover { color: var(--quaternary); }
+    .footer-legal { font-size: 0.85rem; color: #877b9f; margin-top: 8px; }
+  </style>
+</head>
+<body>
+
+  <!-- Header / Navigation -->
+  <nav>
+    <a href="index.html" class="logo">
+      <i class="fa-solid fa-shapes" style="color: var(--quaternary);"></i> the<span>Kami</span>
+    </a>
+    <div class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="apps.html">Our Mobile Apps</a>
+      <a href="privacy-policy.html">Privacy Policy</a>
+      <a href="account-deletion.html" class="active">Account Deletion</a>
+      <a href="terms.html">Terms</a>
+      <a href="contact.html">Contact</a>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="dev-badge">
+      <i class="fa-solid fa-shield-halved"></i> Google Play Data Safety Compliance
+    </div>
+    <h1>Account &amp; Data Deletion</h1>
+    <p>
+      Official account and user data deletion portal for all applications published by <strong>theKami</strong> (Developer: Kumail Raza Bangash) on the Google Play Store.
+    </p>
+  </section>
+
+  <!-- Main Container -->
+  <main class="container">
+
+    <!-- Policy Statement -->
+    <div class="policy-box">
+      <h2><i class="fa-solid fa-circle-info" style="color: var(--quaternary);"></i> Overview &amp; User Rights</h2>
+      <p>
+        In strict accordance with Google Play's <strong>User Data - Account Deletion</strong> policy, we guarantee users full control over their personal data. 
+        If you have created an account or used synchronization features in any app published under the developer entity <strong>theKami</strong>, you can permanently request the deletion of your account and all associated personal records at any time.
+      </p>
+      <p>
+        Deletion permanently purges your account authentication, synced cloud profiles, activity logs, and personal identifiers from our cloud databases (Google Firebase).
+      </p>
+    </div>
+
+    <!-- App Directory -->
+    <h2 class="section-title"><i class="fa-solid fa-mobile-screen" style="color: var(--tertiary);"></i> Supported Applications by <span>theKami</span></h2>
+
+    <div class="apps-list">
+
+      <!-- APP 1: ShapeVibe: Exercise & Yoga -->
+      <div class="app-item" id="shapevibe">
+        <div class="app-item-header">
+          <img src="https://lh3.googleusercontent.com/d/1Hyv6l_B_1Ope-j-9jgEBbLq38Vcthycw" alt="ShapeVibe" class="app-item-icon">
+          <div class="app-item-info">
+            <h3>ShapeVibe: Exercise &amp; Yoga</h3>
+            <span class="app-pkg">com.thekami.shapevibe</span>
+            <span class="developer-tag">Developer: <strong>theKami</strong></span>
+          </div>
+        </div>
+
+        <div class="step-grid">
+          <div class="step-card">
+            <h4><i class="fa-solid fa-bolt" style="color: var(--quaternary);"></i> Method 1: Instant In-App Deletion</h4>
+            <ol>
+              <li>Open the <strong>ShapeVibe</strong> app on your Android device.</li>
+              <li>Tap the <strong>Profile</strong> tab in the bottom navigation bar.</li>
+              <li>Navigate to <strong>Privacy &amp; Security / Settings</strong>.</li>
+              <li>Tap <strong>Delete Account &amp; Data</strong> and confirm the confirmation prompt.</li>
+            </ol>
+            <p style="margin-top: 10px; font-size: 0.82rem; color: var(--text-muted);"><i class="fa-solid fa-clock"></i> Timeline: Processed immediately.</p>
+          </div>
+
+          <div class="step-card">
+            <h4><i class="fa-solid fa-envelope" style="color: var(--accent);"></i> Method 2: Web / Email Request</h4>
+            <ul>
+              <li>If you have uninstalled the app or lost device access, email us directly at <strong>theKami350@gmail.com</strong>.</li>
+              <li>Use Subject: <code>[ShapeVibe] Account & Data Deletion Request</code>.</li>
+              <li>Include your registered email address or account ID.</li>
+            </ul>
+            <p style="margin-top: 10px; font-size: 0.82rem; color: var(--text-muted);"><i class="fa-solid fa-clock"></i> Timeline: Processed within 48 to 72 hours.</p>
+          </div>
+        </div>
+
+        <div class="data-summary">
+          <strong>Data handling details for ShapeVibe:</strong>
+          <ul>
+            <li><strong>Data Permanently Deleted:</strong> Firebase Auth user ID, registered email address, cloud fitness progress, workout logs, daily streak history, and profile metadata.</li>
+            <li><strong>Data Retained:</strong> None. All user records are completely removed. (Anonymized crash telemetry managed by Google Play / AdMob is subject to standard Google retention).</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- APP 2: LuminaWalls: 4K & Live Wallpapers -->
+      <div class="app-item" id="luminawalls">
+        <div class="app-item-header">
+          <img src="https://lh3.googleusercontent.com/d/13VICzKN2Oa_X2rCvXlWLISqYexKy90d4" alt="LuminaWalls" class="app-item-icon">
+          <div class="app-item-info">
+            <h3>LuminaWalls: 4K &amp; Live Wallpapers</h3>
+            <span class="app-pkg">com.thekami.lumina_walls</span>
+            <span class="developer-tag">Developer: <strong>theKami</strong></span>
+          </div>
+        </div>
+
+        <div class="step-grid">
+          <div class="step-card">
+            <h4><i class="fa-solid fa-bolt" style="color: var(--quaternary);"></i> In-App Deletion / Reset</h4>
+            <ol>
+              <li>Open <strong>LuminaWalls</strong>.</li>
+              <li>Go to <strong>Settings</strong> &gt; <strong>Account / Data Privacy</strong>.</li>
+              <li>Tap <strong>Clear Favorites &amp; Account Data</strong>.</li>
+            </ol>
+          </div>
+
+          <div class="step-card">
+            <h4><i class="fa-solid fa-envelope" style="color: var(--accent);"></i> Email Request</h4>
+            <p>Send an email to <strong>theKami350@gmail.com</strong> with Subject: <code>[LuminaWalls] Data Deletion Request</code>.</p>
+          </div>
+        </div>
+
+        <div class="data-summary">
+          <strong>Data handling details for LuminaWalls:</strong>
+          <ul>
+            <li><strong>Data Deleted:</strong> Favorite wallpaper lists, user preferences, and cloud sync records.</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- APP 3: Scuba Sweep Adventure -->
+      <div class="app-item" id="scubasweep">
+        <div class="app-item-header">
+          <img src="https://lh3.googleusercontent.com/d/1XUbiw4-QarZ4VYwlHpxqvu6MPmCVkb4g" alt="Scuba Sweep" class="app-item-icon">
+          <div class="app-item-info">
+            <h3>Scuba Sweep Adventure</h3>
+            <span class="app-pkg">com.thekami.scubasweepadventure</span>
+            <span class="developer-tag">Developer: <strong>theKami</strong></span>
+          </div>
+        </div>
+
+        <div class="step-grid">
+          <div class="step-card">
+            <h4><i class="fa-solid fa-bolt" style="color: var(--quaternary);"></i> In-Game Data Reset</h4>
+            <ol>
+              <li>Open <strong>Scuba Sweep Adventure</strong>.</li>
+              <li>Go to <strong>Options / Settings</strong> &gt; <strong>Reset Game Progress &amp; Data</strong>.</li>
+            </ol>
+          </div>
+
+          <div class="step-card">
+            <h4><i class="fa-solid fa-envelope" style="color: var(--accent);"></i> Email Request</h4>
+            <p>Send an email to <strong>theKami350@gmail.com</strong> with Subject: <code>[ScubaSweep] Score &amp; Account Deletion</code>.</p>
+          </div>
+        </div>
+
+        <div class="data-summary">
+          <strong>Data handling details for Scuba Sweep Adventure:</strong>
+          <ul>
+            <li><strong>Data Deleted:</strong> High scores, game unlocks, and cloud leaderboard profiles.</li>
+          </ul>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Universal Request Form / Contact Box -->
+    <div class="action-box">
+      <h3>Submit a Manual Deletion Request</h3>
+      <p>
+        If you prefer manual deletion or have questions regarding your data across any app by <strong>theKami</strong>, email our support team directly. Requests are processed within 48-72 hours.
+      </p>
+      <a href="mailto:theKami350@gmail.com?subject=Account%20and%20Data%20Deletion%20Request%20-%20theKami&body=Hello%20theKami%20Team%2C%0A%0APlease%20permanently%20delete%20my%20account%20and%20associated%20data.%0A%0AApp%20Name%3A%20%0ARegistered%20Email%20%2F%20User%20ID%3A%20%0A%0AThank%20you." class="btn-mail">
+        <i class="fa-solid fa-envelope-open-text"></i> Email Deletion Request
+      </a>
+    </div>
+
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <div class="footer-links">
+      <a href="index.html">Home</a>
+      <a href="apps.html">Our Mobile Apps</a>
+      <a href="privacy-policy.html">Privacy Policy</a>
+      <a href="account-deletion.html">Account Deletion</a>
+      <a href="terms.html">Terms &amp; Conditions</a>
+      <a href="contact.html">Contact Me</a>
+      <a href="app-ads.txt" target="_blank">app-ads.txt</a>
+    </div>
+    <p>&copy; 2026 <strong>theKami</strong> &bull; Kumail Raza Bangash. All Rights Reserved.</p>
+    <p class="footer-legal">Compliant with Google Play Store &amp; AdMob Advertising Policies.</p>
+    <p style="margin-top: 10px; font-size: 0.88rem;">
+      Support Email: <a href="mailto:theKami350@gmail.com" style="color: var(--quaternary); text-decoration: none; font-weight: 600;">theKami350@gmail.com</a>
+    </p>
+  </footer>
+
+</body>
+</html>
